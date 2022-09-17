@@ -26,3 +26,5 @@
 3. RANDOM 버튼을 눌러 캐릭터를 선정
 4. BOSS 버튼을 눌러 보스를 선정
 5. RESET 버튼을 눌러 처음으로 돌아가기
+
+<img width="435" alt="61ecb64ee3d260773cadf3623121b9fe" src="https://user-images.githubusercontent.com/38485612/190842740-7ae96838-ee09-44a5-8cd6-b9132a25983e.png">
