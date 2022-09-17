@@ -43,8 +43,43 @@ public class RandomButton extends JButton {
 
         this.flag = status.RANDOM;
 
-        randomFrame = new CardFrame("캐릭터 추첨기", 34);
-        randomFrame.addIconsStr(new String[] {
+        randomFrame = new CardFrame("캐릭터 추첨기", 34, new String[] {
+                "아폴리온",
+                "아자젤",
+                "베타니",
+                "???",
+                "케인",
+                "에덴",
+                "이브",
+                "포가튼",
+                "아이작",
+                "야곱",
+                "유다",
+                "키퍼",
+                "라자루스",
+                "릴리스",
+                "로스트",
+                "막달린",
+                "삼손",
+                "아폴리온_알트",
+                "아자젤_알트",
+                "베타니_알트",
+                "???_알트",
+                "케인_알트",
+                "에덴_알트",
+                "이브_알트",
+                "포가튼_알트",
+                "아이작_알트",
+                "야곱_알트",
+                "유다_알트",
+                "키퍼_알트",
+                "라자루스_알트",
+                "릴리스_알트",
+                "로스트_알트",
+                "막달린_알트",
+                "삼손_알트"
+        });
+        randomFrame.addIconsStr2(new String[] {
                 "character/apollyon.png",
                 "character/azazel.png",
                 "character/bethany.png",
@@ -81,9 +116,17 @@ public class RandomButton extends JButton {
                 "character/samson_t.png"
         });
 
-        bossFrame = new CardFrame("보스 추첨기", 7);
+        bossFrame = new CardFrame("보스 추첨기", 7, new String[] {
+                "???",
+                "데릴리움",
+                "도그마",
+                "허쉬",
+                "램",
+                "메가사탄",
+                "마더"
+        });
 
-        bossFrame.addIconsStr(new String[] {
+        bossFrame.addIconsStr2(new String[] {
                 "boss/blue.png",
                 "boss/del.png",
                 "boss/dogma.png",

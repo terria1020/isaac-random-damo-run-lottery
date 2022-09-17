@@ -21,12 +21,16 @@ public class CardFrame extends JFrame implements IFrame {
 
     private JLabel[] labels;
 
-    public CardFrame(String title, int size) throws HeadlessException {
+    private String[] descs;
+
+    public CardFrame(String title, int size, String[] descs) throws HeadlessException {
         super(title);
         icons = new Icon[size];
         labels = new JLabel[size];
         index = 0;
         this.size = size;
+
+        this.descs = descs;
 
         this.setBounds(200, 200, 400, 400);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -57,6 +61,22 @@ public class CardFrame extends JFrame implements IFrame {
         Arrays.stream(path).forEach(p -> {
             this.icons[index] = new ImageIcon(p);
             this.labels[index] = new JLabel(icons[index]);
+
+            mainPanel.add(labels[index]);
+            index++;
+        });
+    }
+
+    public void addIconsStr2(String[] path) {
+        Arrays.stream(path).forEach(p -> {
+            this.icons[index] = new ImageIcon(p);
+            this.labels[index] = new JLabel();
+            this.labels[index].setIcon(icons[index]);
+            this.labels[index].setText(descs[index]);
+            this.labels[index].setHorizontalTextPosition(JLabel.CENTER);
+            this.labels[index].setVerticalTextPosition(JLabel.BOTTOM);
+            this.labels[index].setVerticalAlignment(JLabel.CENTER);
+            this.labels[index].setHorizontalAlignment(JLabel.CENTER);
 
             mainPanel.add(labels[index]);
             index++;
