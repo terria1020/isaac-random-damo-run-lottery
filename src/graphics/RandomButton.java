@@ -163,7 +163,6 @@ public class RandomButton extends JButton {
 
     private void characterChoose() {
         flag = status.BOSS;
-        bossFrame.setVisible(false);
         randomFrame.run();
 
         this.setIcon(bossIcon);
@@ -171,7 +170,6 @@ public class RandomButton extends JButton {
 
     private void bossChoose() {
         flag = status.RESET;
-        randomFrame.setVisible(false);
         bossFrame.run();
 
         this.setIcon(resetIcon);

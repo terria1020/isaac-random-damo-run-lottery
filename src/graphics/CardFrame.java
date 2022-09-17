@@ -87,7 +87,18 @@ public class CardFrame extends JFrame implements IFrame {
     public void run() {
         this.setVisible(true);
 
-        playSound();
+
+
+        for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(90);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            playSound();
+        }
+
+
 
         try {
             Thread.sleep(1000);
