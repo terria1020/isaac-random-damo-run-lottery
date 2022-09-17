@@ -14,7 +14,7 @@
 
 ### 사용 방법
 
-1. Java 설치
+1. Java 설치 : https://www.java.com/ko/download/ie_manual.jsp?locale=ko
 2. 폴더 내의 배치파일(bat) 실행
 
     1. 또는, 폴더 내에서 cmd를 실행 후 다음과 같이 자바 jar을 실행:
