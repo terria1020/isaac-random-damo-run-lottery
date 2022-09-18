@@ -120,7 +120,7 @@ public class CardFrame extends JFrame implements IFrame {
         AudioFormat format;
         DataLine.Info info;
 
-        bgm = new File("select.wav");
+        bgm = new File("sound/select.wav");
 
         Clip clip;
 

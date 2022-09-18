@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URL;
 
 public class RandomButton extends JButton {
 
@@ -29,9 +28,9 @@ public class RandomButton extends JButton {
     private CardFrame bossFrame;
 
     public RandomButton(final JFrame parent) {
-        this.randomIcon = new ImageIcon("random_ico.png");
-        this.bossIcon = new ImageIcon("boss_ico.png");
-        this.resetIcon = new ImageIcon("reset_ico.png");
+        this.randomIcon = new ImageIcon("button/random_ico.png");
+        this.bossIcon = new ImageIcon("button/boss_ico.png");
+        this.resetIcon = new ImageIcon("button/reset_ico.png");
 
         this.setIcon(randomIcon);
 
