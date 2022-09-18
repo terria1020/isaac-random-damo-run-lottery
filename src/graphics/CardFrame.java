@@ -1,5 +1,7 @@
 package graphics;
 
+import resourcemapper.ResourceMapper;
+
 import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
@@ -47,6 +49,12 @@ public class CardFrame extends JFrame implements IFrame {
         this.icons[index] = new ImageIcon(path);
         this.labels[index] = new JLabel(icons[index]);
 
+        this.labels[index].setText(descs[index]);
+        this.labels[index].setHorizontalTextPosition(JLabel.CENTER);
+        this.labels[index].setVerticalTextPosition(JLabel.BOTTOM);
+        this.labels[index].setVerticalAlignment(JLabel.CENTER);
+        this.labels[index].setHorizontalAlignment(JLabel.CENTER);
+
         mainPanel.add(labels[index]);
         index++;
     }
@@ -57,6 +65,7 @@ public class CardFrame extends JFrame implements IFrame {
         });
     }
 
+    @Deprecated
     public void addIconsStr(String[] path) {
         Arrays.stream(path).forEach(p -> {
             this.icons[index] = new ImageIcon(p);
@@ -67,6 +76,7 @@ public class CardFrame extends JFrame implements IFrame {
         });
     }
 
+    @Deprecated
     public void addIconsStr2(String[] path) {
         Arrays.stream(path).forEach(p -> {
             this.icons[index] = new ImageIcon(p);
@@ -98,8 +108,6 @@ public class CardFrame extends JFrame implements IFrame {
             playSound();
         }
 
-
-
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -114,13 +122,13 @@ public class CardFrame extends JFrame implements IFrame {
     }
 
     private void playSound() {
-        File bgm;
+        URL bgm;
+        bgm = ResourceMapper.getUrl("sound/select.wav");
 
         AudioInputStream stream;
         AudioFormat format;
         DataLine.Info info;
 
-        bgm = new File("select.wav");
 
         Clip clip;
 
@@ -143,4 +151,9 @@ public class CardFrame extends JFrame implements IFrame {
             throw new RuntimeException(e);
         }
     }
+
+    public void hideFrame() {
+        this.setVisible(false);
+    }
+
 }
