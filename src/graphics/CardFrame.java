@@ -99,9 +99,9 @@ public class CardFrame extends JFrame implements IFrame {
 
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 23; i++) {
             try {
-                Thread.sleep(90);
+                Thread.sleep(10 + (i * 7));
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
