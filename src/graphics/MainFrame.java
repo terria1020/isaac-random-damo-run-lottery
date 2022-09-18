@@ -17,7 +17,7 @@ public class MainFrame extends JFrame implements IFrame {
         mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
 
-        mainPanel.add(new RandomButton(this), BorderLayout.CENTER);
+        mainPanel.add(new RandomButton(), BorderLayout.CENTER);
 
         this.setContentPane(mainPanel);
     }

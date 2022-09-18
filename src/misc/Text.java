@@ -95,7 +95,7 @@ public class Text {
             "마더"
     };
 
-    public String[] bossIcoPath = {
+    public static String[] btnIcoPath = {
             "button/boss_ico.png",
             "button/random_ico.png",
             "button/reset_ico.png"
