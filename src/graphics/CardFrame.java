@@ -25,7 +25,11 @@ public class CardFrame extends JFrame implements IFrame {
 
     private String[] descs;
 
-    public CardFrame(String title, int size, String[] descs) throws HeadlessException {
+    private JFrame parent;
+
+    private int correction;
+
+    public CardFrame(String title, int size, String[] descs, JFrame parent, int correction) throws HeadlessException {
         super(title);
         icons = new Icon[size];
         labels = new JLabel[size];
@@ -33,8 +37,16 @@ public class CardFrame extends JFrame implements IFrame {
         this.size = size;
 
         this.descs = descs;
+        this.parent = parent;
+        this.correction = correction;
 
-        this.setBounds(200, 200, 400, 400);
+        int parent_x;
+        int parent_y;
+
+        parent_x = parent.getX();
+        parent_y = parent.getY();
+
+        this.setBounds(parent_x + (400 * correction), parent_y, 400, 400);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.setResizable(false);
 
@@ -43,10 +55,17 @@ public class CardFrame extends JFrame implements IFrame {
 
         this.setContentPane(mainPanel);
 
+
     }
 
     public void addIcon(URL path) {
-        this.icons[index] = new ImageIcon(path);
+        ImageIcon icon = new ImageIcon(path);
+        Image original = icon.getImage();
+        Image scaled = original.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+
+        //this.icons[index] = new ImageIcon(path);
+        this.icons[index] = new ImageIcon(scaled);
+
         this.labels[index] = new JLabel(icons[index]);
 
         this.labels[index].setText(descs[index]);
@@ -54,6 +73,8 @@ public class CardFrame extends JFrame implements IFrame {
         this.labels[index].setVerticalTextPosition(JLabel.BOTTOM);
         this.labels[index].setVerticalAlignment(JLabel.CENTER);
         this.labels[index].setHorizontalAlignment(JLabel.CENTER);
+
+        this.labels[index].setSize(100, 100);
 
         mainPanel.add(labels[index]);
         index++;
@@ -65,39 +86,9 @@ public class CardFrame extends JFrame implements IFrame {
         });
     }
 
-    @Deprecated
-    public void addIconsStr(String[] path) {
-        Arrays.stream(path).forEach(p -> {
-            this.icons[index] = new ImageIcon(p);
-            this.labels[index] = new JLabel(icons[index]);
-
-            mainPanel.add(labels[index]);
-            index++;
-        });
-    }
-
-    @Deprecated
-    public void addIconsStr2(String[] path) {
-        Arrays.stream(path).forEach(p -> {
-            this.icons[index] = new ImageIcon(p);
-            this.labels[index] = new JLabel();
-            this.labels[index].setIcon(icons[index]);
-            this.labels[index].setText(descs[index]);
-            this.labels[index].setHorizontalTextPosition(JLabel.CENTER);
-            this.labels[index].setVerticalTextPosition(JLabel.BOTTOM);
-            this.labels[index].setVerticalAlignment(JLabel.CENTER);
-            this.labels[index].setHorizontalAlignment(JLabel.CENTER);
-
-            mainPanel.add(labels[index]);
-            index++;
-        });
-    }
-
     @Override
     public void run() {
         this.setVisible(true);
-
-
 
         for (int i = 0; i < 23; i++) {
             try {

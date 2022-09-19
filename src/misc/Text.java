@@ -40,9 +40,7 @@ public class Text {
 
     public static String[] bossResPath = {
             "boss/blue.png",
-            "boss/del.png",
             "boss/dogma.png",
-            "boss/hush.png",
             "boss/lamb.png",
             "boss/megasatan.png",
             "boss/mother.png"
@@ -66,38 +64,36 @@ public class Text {
             "로스트",
             "막달린",
             "삼손",
-            "아폴리온_알트",
-            "아자젤_알트",
-            "베타니_알트",
-            "???_알트",
-            "케인_알트",
-            "에덴_알트",
-            "이브_알트",
-            "포가튼_알트",
-            "아이작_알트",
-            "야곱_알트",
-            "유다_알트",
-            "키퍼_알트",
-            "라자루스_알트",
-            "릴리스_알트",
-            "로스트_알트",
-            "막달린_알트",
-            "삼손_알트"
+            "알트 아폴리온",
+            "알트 아자젤",
+            "알트 베타니",
+            "알트 ???",
+            "알트 케인",
+            "알트 에덴",
+            "알트 이브",
+            "알트 포가튼",
+            "알트 아이작",
+            "알트 야곱",
+            "알트 유다",
+            "알트 키퍼",
+            "알트 라자루스",
+            "알트 릴리스",
+            "알트 로스트",
+            "알트 막달린",
+            "알트 삼손"
     };
 
     public static String[] bossText = {
             "???",
-            "데릴리움",
             "도그마",
-            "허쉬",
             "램",
             "메가사탄",
             "마더"
     };
 
     public static String[] btnIcoPath = {
-            "button/boss_ico.png",
             "button/random_ico.png",
+            "button/boss_ico.png",
             "button/reset_ico.png"
     };
 
