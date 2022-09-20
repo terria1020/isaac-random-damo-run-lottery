@@ -40,7 +40,7 @@ public class Text {
 
     public static String[] bossResPath = {
             "boss/blue.png",
-            "boss/dogma.png",
+            "boss/beast.png",
             "boss/lamb.png",
             "boss/megasatan.png",
             "boss/mother.png"
@@ -85,7 +85,7 @@ public class Text {
 
     public static String[] bossText = {
             "???",
-            "도그마",
+            "비스트",
             "램",
             "메가사탄",
             "마더"

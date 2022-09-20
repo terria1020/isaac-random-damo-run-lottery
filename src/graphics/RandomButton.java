@@ -44,7 +44,7 @@ public class RandomButton extends JButton {
         randomFrame = new CardFrame("캐릭터 추첨기", 34, Text.charText, parent, 1);
         randomFrame.addIcons(ResourceMapper.getAllUrl(Text.charResPath));
 
-        bossFrame = new CardFrame("보스 추첨기", 7, Text.bossText, parent, 2);
+        bossFrame = new CardFrame("보스 추첨기", 5, Text.bossText, parent, 2);
         bossFrame.addIcons(ResourceMapper.getAllUrl(Text.bossResPath));
     }
 

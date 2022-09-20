@@ -46,7 +46,7 @@ public class CardFrame extends JFrame implements IFrame {
         parent_x = parent.getX();
         parent_y = parent.getY();
 
-        this.setBounds(parent_x + (400 * correction), parent_y, 400, 400);
+        this.setBounds(parent_x + (300 * correction), parent_y, 300, 300);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.setResizable(false);
 
@@ -54,8 +54,6 @@ public class CardFrame extends JFrame implements IFrame {
         mainPanel = new JPanel(layout);
 
         this.setContentPane(mainPanel);
-
-
     }
 
     public void addIcon(URL path) {
@@ -88,9 +86,12 @@ public class CardFrame extends JFrame implements IFrame {
 
     @Override
     public void run() {
+
+        this.setLocation(parent.getX() + (300 * correction), parent.getY());
+
         this.setVisible(true);
 
-        for (int i = 0; i < 23; i++) {
+        for (int i = 0; i < 16; i++) {
             try {
                 Thread.sleep(10 + (i * 7));
             } catch (InterruptedException e) {
@@ -107,7 +108,11 @@ public class CardFrame extends JFrame implements IFrame {
 
         Random rand = new Random();
 
-        for (int i = 0; i < rand.nextInt(100); i++) {
+        int randomNumber = rand.nextInt(size);
+
+        System.out.println("randomNumber : " + randomNumber);
+
+        for (int i = 0; i < randomNumber; i++) {
             layout.next(this.getContentPane());
         }
     }
@@ -119,7 +124,6 @@ public class CardFrame extends JFrame implements IFrame {
         AudioInputStream stream;
         AudioFormat format;
         DataLine.Info info;
-
 
         Clip clip;
 
