@@ -12,7 +12,7 @@ public class MainFrame extends JFrame implements IFrame {
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
-        this.setSize(300, 300);
+        this.setSize(350, 300);
 
         int xpos = (int)(dim.getWidth()/2 - dim.getWidth()/2);
 

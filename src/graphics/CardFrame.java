@@ -46,7 +46,7 @@ public class CardFrame extends JFrame implements IFrame {
         parent_x = parent.getX();
         parent_y = parent.getY();
 
-        this.setBounds(parent_x + (300 * correction), parent_y, 300, 300);
+        this.setBounds(parent_x + (350 * correction), parent_y, 350, 300);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.setResizable(false);
 
@@ -92,7 +92,7 @@ public class CardFrame extends JFrame implements IFrame {
     @Override
     public void run() {
 
-        this.setLocation(parent.getX() + (300 * correction), parent.getY());
+        this.setLocation(parent.getX() + (350 * correction), parent.getY());
 
         this.setVisible(true);
 
