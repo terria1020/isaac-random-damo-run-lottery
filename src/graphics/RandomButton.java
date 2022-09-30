@@ -41,8 +41,8 @@ public class RandomButton extends JButton {
         this.parent = parent;
 
         this.flag = status.RANDOM;
-        randomFrame = new CardFrame("캐릭터 추첨기", 34, Text.charText, parent, 1);
-        randomFrame.addIcons(ResourceMapper.getAllUrl(Text.charResPath));
+        randomFrame = new CardFrame("캐릭터 추첨기", 2, Text.charTypeText, parent, 1);
+        randomFrame.addIcons(ResourceMapper.getAllUrl(Text.charTypeResPath));
 
         bossFrame = new CardFrame("보스 추첨기", 5, Text.bossText, parent, 2);
         bossFrame.addIcons(ResourceMapper.getAllUrl(Text.bossResPath));
@@ -72,10 +72,11 @@ public class RandomButton extends JButton {
     }
 
     private void characterChoose() {
-        flag = status.BOSS;
+        flag = status.RESET;
         randomFrame.run();
+        bossFrame.run();
 
-        this.setIcon(bossIcon);
+        this.setIcon(resetIcon);
     }
 
     private void bossChoose() {

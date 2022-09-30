@@ -57,12 +57,17 @@ public class CardFrame extends JFrame implements IFrame {
     }
 
     public void addIcon(URL path) {
-        ImageIcon icon = new ImageIcon(path);
-        Image original = icon.getImage();
-        Image scaled = original.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
 
-        //this.icons[index] = new ImageIcon(path);
-        this.icons[index] = new ImageIcon(scaled);
+        if (path.toString().contains("boss")) {
+            ImageIcon icon = new ImageIcon(path);
+            Image original = icon.getImage();
+
+            Image scaled = original.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+            this.icons[index] = new ImageIcon(scaled);
+        }
+        else {
+            this.icons[index] = new ImageIcon(path);
+        }
 
         this.labels[index] = new JLabel(icons[index]);
 
@@ -111,6 +116,8 @@ public class CardFrame extends JFrame implements IFrame {
         int randomNumber = rand.nextInt(size);
 
         System.out.println("randomNumber : " + randomNumber);
+
+        layout.first(this.getContentPane());
 
         for (int i = 0; i < randomNumber; i++) {
             layout.next(this.getContentPane());

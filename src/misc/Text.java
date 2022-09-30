@@ -46,6 +46,11 @@ public class Text {
             "boss/mother.png"
     };
 
+    public static String[] charTypeResPath = {
+            "chartype/normal.png",
+            "chartype/tainted.png"
+    };
+
     public static String[] charText = {
             "아폴리온",
             "아자젤",
@@ -89,6 +94,11 @@ public class Text {
             "램",
             "메가사탄",
             "마더"
+    };
+
+    public static String[] charTypeText = {
+            "노말 캐릭터",
+            "알트 캐릭터"
     };
 
     public static String[] btnIcoPath = {
